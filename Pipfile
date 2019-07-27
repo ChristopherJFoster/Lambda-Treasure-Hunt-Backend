@@ -9,6 +9,7 @@ v = {editable = true,version = "*"}
 autopep8 = "*"
 
 [packages]
+django = "*"
 
 [requires]
 python_version = "3.7"
