@@ -5,5 +5,7 @@ from . import views
 app_name = 'autohunt'
 urlpatterns = [
     # ex: /autohunt/
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    # ex: /autohunt/convert-map
+    path('convert-map', views.convert_map)
 ]
