@@ -8,10 +8,10 @@ pylint = "*"
 v = {editable = true,version = "*"}
 autopep8 = "*"
 pep8 = "*"
-sqlite3 = "*"
 
 [packages]
 django = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
