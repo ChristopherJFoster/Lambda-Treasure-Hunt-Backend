@@ -5,3 +5,4 @@ mapDataFull.json
 visual_map.ai
 visual_map.svg
 traverse.py
+traverseFullLoopNoTreasure.py

@@ -16,6 +16,11 @@ class Room(models.Model):
     notes = models.TextField(blank=True)
     elevation = models.IntegerField(null=True)
     terrain = models.CharField(max_length=255, blank=True)
+    players = models.TextField(blank=True)
+    items = models.TextField(blank=True)
+    cooldown = models.FloatField(null=True)
+    errors = models.TextField(blank=True)
+    messages = models.TextField(blank=True)
 
     def __str__(self):
         return f'#{self.room_id} {self.title}'

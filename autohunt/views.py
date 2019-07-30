@@ -8,7 +8,8 @@ from django.shortcuts import get_object_or_404, render
 from .models import Room
 from LTHBE.settings import BASE_DIR
 
-from .traverse import command_loop
+from .traverse import command_loop as traverseWithTreasure
+from .traverseFullLoopNoTreasure import command_loop as traverseWithoutTreasure
 
 
 def index(request):
@@ -17,8 +18,13 @@ def index(request):
     return render(request, 'autohunt/index.html', context)
 
 
-def traverse(request):
-    command_loop('auto')
+def traverseTreasure(request):
+    traverseWithTreasure('auto')
+    return JsonResponse({'message': 'Auto-traversing...'})
+
+
+def traverseNoTreasure(request):
+    traverseWithoutTreasure('auto')
     return JsonResponse({'message': 'Auto-traversing...'})
 
 
