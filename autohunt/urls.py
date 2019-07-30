@@ -7,5 +7,7 @@ urlpatterns = [
     # ex: /autohunt/
     path('', views.index, name='index'),
     # ex: /autohunt/convert-map
-    path('convert-map', views.convert_map)
+    path('convert-map', views.convert_map),
+    # ex: /autohunt/traverse
+    path('traverse', views.traverse),
 ]

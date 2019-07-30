@@ -6,8 +6,9 @@ from django.http import HttpResponse, Http404, JsonResponse
 from django.shortcuts import get_object_or_404, render
 
 from .models import Room
-from .scripts import autohunt
 from LTHBE.settings import BASE_DIR
+
+from .traverse import command_loop
 
 
 def index(request):
@@ -15,13 +16,13 @@ def index(request):
     context = {'rooms_list': rooms_list, }
     return render(request, 'autohunt/index.html', context)
 
-# def autohunt(request):
-#     # runs autohunt script
-#     return HttpResponse
+
+def traverse(request):
+    command_loop('auto')
+    return JsonResponse({'message': 'Auto-traversing...'})
 
 
 def convert_map(request):
-
     map = {}
     PATH = os.path.join(BASE_DIR, 'mapDataFull.json')
     try:
