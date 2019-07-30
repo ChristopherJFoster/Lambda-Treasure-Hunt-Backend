@@ -14,6 +14,8 @@ class Room(models.Model):
     exitS = models.CharField(max_length=255)
     exitW = models.CharField(max_length=255)
     notes = models.TextField(blank=True)
+    elevation = models.IntegerField(null=True)
+    terrain = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return f'#{self.room_id} {self.title}'
