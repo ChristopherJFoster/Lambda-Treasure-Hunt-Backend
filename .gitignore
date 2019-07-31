@@ -1,5 +1,6 @@
 .env
 NOTES.md
+autohunt/adventure
 autohunt/scripts
 mapDataFull.json
 visual_map.ai
