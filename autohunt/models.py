@@ -17,6 +17,7 @@ class Player(models.Model):
     status = models.TextField(blank=True)
     errors = models.TextField(blank=True)
     messages = models.TextField(blank=True)
+    current_room = models.IntegerField(null=True)
 
     def __str__(self):
         return f'#{self.username} {self.name}'
