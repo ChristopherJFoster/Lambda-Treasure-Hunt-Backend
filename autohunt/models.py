@@ -15,6 +15,7 @@ class Player(models.Model):
     gold = models.IntegerField(null=True)
     inventory = models.TextField(blank=True)
     status = models.TextField(blank=True)
+    has_mined = models.BooleanField(null=True)
     errors = models.TextField(blank=True)
     messages = models.TextField(blank=True)
     current_room = models.IntegerField(null=True)
