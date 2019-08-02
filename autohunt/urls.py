@@ -8,8 +8,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     # ex: /autohunt/convert-map
     path('convert-map', views.convert_map),
-    # ex: /autohunt/traverse-treasure
-    path('traverse-treasure', views.traverseTreasure),
+
+    # ex: /autohunt/loot/<API_KEY here>/
+    path('loot/<str:key>/', views.lambda_loot),
+
+    # path('loot/', views.lambda_loot),
+
     # ex: /autohunt/traverse-no-treasure
     path('traverse-no-treasure', views.traverseNoTreasure),
 ]
